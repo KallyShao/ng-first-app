@@ -24,12 +24,25 @@
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "**/*",
+                "input": "./node_modules/@ant-design/icons-angular/src/inline-svg/",
+                "output": "/assets/"
+              }
             ],
             "styles": [
-              "src/styles.styl"
+              "src/theme.less",
+              "src/styles.styl",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/@antv/g2/dist/g2.min.js",
+              "node_modules/@antv/data-set/dist/data-set.min.js",
+              "node_modules/@antv/g2-plugin-slider/dist/g2-plugin-slider.min.js",
+              "./node_modules/jquery/dist/jquery.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -85,7 +98,11 @@
             "styles": [
               "src/styles.styl"
             ],
-            "scripts": [],
+            "scripts": [
+              "node_modules/@antv/g2/dist/g2.min.js",
+              "node_modules/@antv/data-set/dist/data-set.min.js",
+              "node_modules/@antv/g2-plugin-slider/dist/g2-plugin-slider.min.js"
+            ],
             "assets": [
               "src/favicon.ico",
               "src/assets"

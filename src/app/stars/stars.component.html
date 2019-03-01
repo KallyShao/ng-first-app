@@ -1,0 +1,4 @@
+<p>
+  <!-- <span *ngFor="let val of ratings" class="glyphicon" [ngClass]="{'glyphicon-star': val, 'glyphicon-star-empty': !val}"></span> -->
+  <span *ngFor="let val of ratings" class="glyphicon glyphicon-star" [class.glyphicon-star-empty]="!val"></span>
+</p>
