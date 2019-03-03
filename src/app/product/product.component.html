@@ -5,9 +5,10 @@
       <div class="caption">
         <h4 class="pull-right">{{ item.price }}元</h4>
         <h4>
-          <a [routerLink]="['/nav']">{{ item.title }}</a>
+          <a [routerLink]="['/nav', 1]">{{ item.title }}</a>
         </h4>
         <p>{{ item.desc }}</p>
+        <button (click)="toDetail()">商品详情</button>
       </div>
       <div>
         <app-stars [rating]="item.rating"></app-stars>

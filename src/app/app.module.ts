@@ -15,6 +15,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ProductComponent } from './product/product.component';
 import { SearchComponent } from './search/search.component';
 import { StarsComponent } from './stars/stars.component';
+import { Code404Component } from './code404/code404.component';
 
 
 registerLocaleData(en);
@@ -27,7 +28,8 @@ registerLocaleData(en);
         NavbarComponent,
         ProductComponent,
         SearchComponent,
-        StarsComponent
+        StarsComponent,
+        Code404Component
     ],
     imports: [
         BrowserModule,

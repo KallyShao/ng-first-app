@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class ProductComponent implements OnInit {
 
   private products: Array<Product>;
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() { //这个钩子会在组件初始化时调用一次
     this.products = [
@@ -19,6 +20,10 @@ export class ProductComponent implements OnInit {
       new Product(5, '第五个商品', 1.99, 3, '商品描述', ['cate1', 'cate2']),
       new Product(6, '第六个商品', 1.99, 4, '商品描述', ['cate1', 'cate2'])
     ];
+  }
+  toDetail() {
+    // console.log(2772);
+    this.router.navigate(['/nav']);
   }
 }
 
