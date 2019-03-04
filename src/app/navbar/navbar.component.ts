@@ -12,7 +12,7 @@ export class NavbarComponent implements OnInit {
   constructor(private routeInfo: ActivatedRoute) { }
 
   ngOnInit() {
-    console.log(this.routeInfo.snapshot.params);
+    // console.log(this.routeInfo.snapshot.params);
     this.productId = this.routeInfo.snapshot.params['id'];
   }
 

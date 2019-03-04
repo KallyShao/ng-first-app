@@ -21,9 +21,9 @@ export class ProductComponent implements OnInit {
       new Product(6, '第六个商品', 1.99, 4, '商品描述', ['cate1', 'cate2'])
     ];
   }
-  toDetail() {
-    // console.log(2772);
-    this.router.navigate(['/nav']);
+  toDetail(id) {
+    console.log(id);
+    this.router.navigate(['/detail', id]);
   }
 }
 
