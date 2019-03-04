@@ -4,6 +4,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { Code404Component } from './code404/code404.component';
 import { StarsComponent } from './stars/stars.component';
+import { GuardComponent } from './guard/guard.component';
+import { LoginGuard } from './util/login.guard';
 
 const routes: Routes = [
   {
@@ -28,6 +30,11 @@ const routes: Routes = [
     ]
   },
   {
+    path: 'guard',
+    component: GuardComponent,
+    canActivate: [LoginGuard]
+  },
+  {
     path: '**',
     component: Code404Component
   }
@@ -35,6 +42,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [ RouterModule.forRoot(routes) ],
-  exports: [ RouterModule ]
+  exports: [ RouterModule ],
+  providers: [LoginGuard]
 })
 export class AppRoutingModule {}

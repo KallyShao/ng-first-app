@@ -16,6 +16,7 @@ import { ProductComponent } from './product/product.component';
 import { SearchComponent } from './search/search.component';
 import { StarsComponent } from './stars/stars.component';
 import { Code404Component } from './code404/code404.component';
+import { GuardComponent } from './guard/guard.component';
 
 
 registerLocaleData(en);
@@ -29,7 +30,8 @@ registerLocaleData(en);
         ProductComponent,
         SearchComponent,
         StarsComponent,
-        Code404Component
+        Code404Component,
+        GuardComponent
     ],
     imports: [
         BrowserModule,
