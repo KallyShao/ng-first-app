@@ -19,6 +19,7 @@ import { Code404Component } from './code404/code404.component';
 import { GuardComponent } from './guard/guard.component';
 import { ProDetailComponent } from './pro-detail/pro-detail.component';
 import { HomeComponent } from './home/home.component';
+import { ProductService } from './shared/product.service';
 
 
 registerLocaleData(en);
@@ -45,7 +46,7 @@ registerLocaleData(en);
         HttpClientModule,
         NoopAnimationsModule
     ],
-    providers: [{ provide: NZ_I18N, useValue: en_US }],
+    providers: [{ provide: NZ_I18N, useValue: en_US }, ProductService],
     bootstrap: [AppComponent] 
 })
 export class AppModule { }
