@@ -1,7 +1,9 @@
 <form name="searchForm">
   <div class="form-group">
     <label for="productTitle">商品名称：</label>
-    <input type="text" id="productTitle" placeholder="商品名称" class="form-control">
+    <input type="text" id="productTitle" placeholder="商品名称" class="form-control"
+      [attr.aa]="attr"
+    [value]="defaultVal" (input)="_input($event)">
   </div>
   <div class="form-group">
     <label for="productPrice">商品价格：</label>
@@ -14,6 +16,6 @@
     </select>
   </div>
   <div class="form-group">
-    <button type="submit" class="btn btn-primary btn-block">搜索</button>
+    <button type="submit" class="btn btn-primary btn-block" [disabled]="false">搜索</button>
   </div>
 </form>
