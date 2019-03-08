@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core'; 
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
@@ -20,6 +20,7 @@ import { GuardComponent } from './guard/guard.component';
 import { ProDetailComponent } from './pro-detail/pro-detail.component';
 import { HomeComponent } from './home/home.component';
 import { ProductService } from './shared/product.service';
+import { MultiplePipe } from './pipe/multiple.pipe';
 
 
 registerLocaleData(en);
@@ -36,7 +37,8 @@ registerLocaleData(en);
         Code404Component,
         GuardComponent,
         ProDetailComponent,
-        HomeComponent
+        HomeComponent,
+        MultiplePipe
     ],
     imports: [
         BrowserModule,
@@ -44,7 +46,8 @@ registerLocaleData(en);
         FormsModule,
         NgZorroAntdModule,
         HttpClientModule,
-        NoopAnimationsModule
+        NoopAnimationsModule,
+        ReactiveFormsModule
     ],
     providers: [{ provide: NZ_I18N, useValue: en_US }, ProductService],
     bootstrap: [AppComponent] 

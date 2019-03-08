@@ -10,6 +10,7 @@ import { ProductService, Product, Comment } from '../shared/product.service';
 export class ProDetailComponent implements OnInit {
   proDetail: Product;
   comments: Comment[];
+
   constructor(private routeInfo: ActivatedRoute, private productService: ProductService) { }
 
   ngOnInit() {
