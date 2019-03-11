@@ -22,6 +22,7 @@ import { HomeComponent } from './home/home.component';
 import { ProductService } from './shared/product.service';
 import { MultiplePipe } from './pipe/multiple.pipe';
 import { FilterPipe } from './pipe/filter.pipe';
+import { OrderComponent } from './order/order.component';
 
 
 registerLocaleData(en);
@@ -40,7 +41,8 @@ registerLocaleData(en);
         ProDetailComponent,
         HomeComponent,
         MultiplePipe,
-        FilterPipe
+        FilterPipe,
+        OrderComponent
     ],
     imports: [
         BrowserModule,

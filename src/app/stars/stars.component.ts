@@ -16,7 +16,10 @@ export class StarsComponent implements OnInit {
   price: number;
   //对外输出
   @Output()
-  lastPrice: EventEmitter<PriceQuote>= new EventEmitter();
+  lastPrice: EventEmitter<PriceQuote> = new EventEmitter();
+
+  @Output()
+  buy: EventEmitter<PriceQuote> = new EventEmitter();
 
   constructor() { 
     setInterval(() => {
@@ -40,10 +43,18 @@ export class StarsComponent implements OnInit {
     }
     return arr;
   }
+  _buyStock() {
+    let quote: PriceQuote = new PriceQuote(this.stockCode, 100 * Math.random());
+    this.price = quote.latestPrice;
+    if (this.price < 5) {
+      this.buy.emit(quote);
+    }
+  }
 }
 // 输出属性学习
 export class PriceQuote {
   constructor (public stockCode: string, public latestPrice: number) {
 
   }
+
 }

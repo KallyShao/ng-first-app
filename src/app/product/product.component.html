@@ -20,12 +20,9 @@
         <p>{{ item.desc }}</p>
       </div>
       <div>
-        <app-stars [rating]="item.rating" (lastPrice)="_emitPrice($event)"></app-stars>
-        <hr>
-        <hr>
-        <h3>接收子组件传的值</h3>
-        <p>股票代码：{{ priceQuote.stockCode }}</p>
-        <p>股票价格：{{ priceQuote.latestPrice }}</p>
+        <app-stars [rating]="item.rating" (lastPrice)="_emitPrice($event)"
+          (buy)="_emitBuy($event)"
+        ></app-stars>
       </div>
     </div>
   </div>
